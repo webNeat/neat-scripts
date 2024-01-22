@@ -1,6 +1,6 @@
 {
-  "name": "scripts",
-  "displayName": "Scripts",
+  "name": "neat-scripts",
+  "displayName": "Neat Scripts",
   "description": "Automate vscode using external scripts",
   "version": "0.0.1",
   "license": "MIT",
@@ -33,11 +33,11 @@
   "contributes": {
     "commands": [
       {
-        "command": "scripts.run",
+        "command": "neat-scripts.run",
         "title": "Run external script on the current file"
       },
       {
-        "command": "scripts.files.open",
+        "command": "neat-scripts.files.open",
         "title": "Opens a file by absolute path"
       }
     ]
