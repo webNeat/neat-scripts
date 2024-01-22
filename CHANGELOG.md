@@ -6,5 +6,5 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-## [0.0.1-alpha.0] - 2024-01-22
+## [0.0.1] - 2024-01-22
 - Initial release
