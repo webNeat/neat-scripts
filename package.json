@@ -3,11 +3,30 @@
   "displayName": "Scripts",
   "description": "Automate vscode using external scripts",
   "version": "0.0.1-alpha.0",
+  "license": "MIT",
+  "publisher": "webneat",
+  "author": {
+    "name": "Amine Ben hammou",
+    "email": "webneat@gmail.com"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webNeat/vscode-scripts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webNeat/vscode-scripts/issues"
+  },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "vscode",
+    "extension",
+    "scripts",
+    "automation"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
