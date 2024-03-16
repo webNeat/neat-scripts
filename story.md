@@ -1,5 +1,3 @@
-# How I created a VSCode extension to automate things with external scripts
-
 ## Problem 1: Open File
 
 it all started when I wanted to use VSCode to handle my tasks, I use [Todo+](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-todo-plus) which is great. But at some point, I wanted to split tasks into multiple files and I needed a way to navigate between them easily. So I would have something like:
@@ -322,4 +320,17 @@ export function deactivate() {}
 
 ## Step 9: Publish the extension
 
-...
+Now that I had a working version of the extension, I decided to publish it so that I can test it in real life usage. So I created an account in the VSCode marketplace and [published the extension](https://marketplace.visualstudio.com/items?itemName=webneat.neat-scripts), I had to rename it as `Neat Scripts` because `scripts` was taken.
+
+# What's next
+
+I consider the currently published version an alpha version as I am still testing it and may change many things. Some next steps are:
+
+- Use the extension in real world and add common useful commands: show suggestions, add overlays, ...
+- Handle errors properly.
+- Add tests.
+- Write a good documentation with examples of usage in different languages.
+- Create a logo.
+- Think about a way to organize and share scripts
+
+What do you think about this extension? feel free to open issues in [the Github repo](https://github.com/webNeat/vscode-scripts) or reach out [on Twitter](https://twitter.com/WebNeat). All feedback is welcome :)
