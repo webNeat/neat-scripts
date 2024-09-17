@@ -1,5 +1,5 @@
-# Automate VSCode with external scripts
+# Neat Scripts
 
-This extension is still under construction, this alpha version is published to test the extension in real life and collect/fix bugs before releasing the stable version.
+An extension to automate VSCode with external scripts.
 
-Take a look at [the story that lead to the creation of this extension](story.md)
+
