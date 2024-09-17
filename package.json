@@ -2,7 +2,7 @@
   "name": "neat-scripts",
   "displayName": "Neat Scripts",
   "description": "Automate vscode using external scripts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "publisher": "webneat",
   "author": {
@@ -39,6 +39,18 @@
       {
         "command": "neat-scripts.files.open",
         "title": "Opens a file by absolute path"
+      },
+      {
+        "command": "neat-scripts.notifications.info",
+        "title": "Show info notification"
+      },
+      {
+        "command": "neat-scripts.notifications.warning",
+        "title": "Show warning notification"
+      },
+      {
+        "command": "neat-scripts.notifications.error",
+        "title": "Show error notification"
       }
     ]
   },
