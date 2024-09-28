@@ -2,7 +2,7 @@
   "name": "neat-scripts",
   "displayName": "Neat Scripts",
   "description": "Automate vscode using external scripts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "publisher": "webneat",
   "author": {
@@ -51,6 +51,10 @@
       {
         "command": "neat-scripts.notifications.error",
         "title": "Show error notification"
+      },
+      {
+        "command": "neat-scripts.completions.show",
+        "title": "Show completion suggestions"
       }
     ]
   },

@@ -15,6 +15,8 @@ type Command = string | { command: string; args?: unknown }
 
 export async function run(args: Args) {
   try {
+    const editor = vscode.window.activeTextEditor
+    if (editor) await vscode.commands.executeCommand('workbench.action.files.save')
     const stdout = await exec(args.script, JSON.stringify(getContext()))
     for (const command of JSON.parse(stdout)) {
       await runCommand(command)

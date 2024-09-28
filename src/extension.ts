@@ -7,6 +7,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(vscode.commands.registerCommand('neat-scripts.notifications.info', commands.notifications.info))
   context.subscriptions.push(vscode.commands.registerCommand('neat-scripts.notifications.warning', commands.notifications.warning))
   context.subscriptions.push(vscode.commands.registerCommand('neat-scripts.notifications.error', commands.notifications.error))
+  context.subscriptions.push(vscode.commands.registerCommand('neat-scripts.completions.show', commands.completions.show))
 }
 
 export function deactivate() {}
