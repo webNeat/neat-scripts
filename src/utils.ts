@@ -1,12 +1,10 @@
 import * as childProcess from 'child_process'
 
-export async function exec(command: string, stdin = '') {
-  return new Promise<string>((resolve, reject) => {
-    const child = childProcess.exec(command, (error, stdout, stderr) => {
-      if (error) return reject(error)
-      resolve(stdout)
-    })
-    child.stdin!.write(stdin)
-    child.stdin!.end()
+export function exec(command: string, args: string[], context: string): childProcess.ChildProcess {
+  const child = childProcess.spawn(command, args, {
+    stdio: ['pipe', 'pipe', 'pipe'],
   })
+  child.stdin!.write(context)
+  child.stdin!.end()
+  return child
 }
