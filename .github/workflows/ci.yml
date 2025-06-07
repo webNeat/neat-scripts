@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      DISPLAY: ":99"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: 'latest'
+      - name: Start virtual frame buffer (for VS Code tests)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          sudo /usr/bin/Xvfb :99 -screen 0 1920x1080x24 &
+      - name: Build & test libs/nodejs
+        run: |
+          cd libs/nodejs
+          bun install --frozen-lockfile
+          bun run test
+      - name: Build & test extensions/vscode
+        run: |
+          cd extensions/vscode
+          bun install --frozen-lockfile
+          bun run build
+          xvfb-run -a bun run test
