@@ -1,0 +1,68 @@
+{
+  "name": "jisr",
+  "private": true,
+  "displayName": "Jisr",
+  "description": "Automate VSCode using external scripts",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "build:tests": "tsc -p tsconfig.tests.json",
+    "test": "vscode-test",
+    "test:watch": "vscode-test --watch",
+    "pretest": "npm run build && npm run build:tests",
+    "vscode:prepublish": "npm run build"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "jisr.run_script",
+        "title": "Run a script on the current file"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.100.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "dedent": "^1.6.0",
+    "expect": "^30.0.0-beta.3",
+    "mocha": "^11.5.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  },
+  "license": "MIT",
+  "publisher": "webneat",
+  "author": {
+    "name": "Amine Ben hammou",
+    "email": "webneat@gmail.com"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webNeat/jisr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webNeat/jisr/issues"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "vscode",
+    "extension",
+    "scripts",
+    "automation"
+  ],
+  "activationEvents": [],
+  "main": "./dist/index.js",
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "useTabs": false,
+    "printWidth": 155,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}

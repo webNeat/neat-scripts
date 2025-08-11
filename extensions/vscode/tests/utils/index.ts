@@ -1,0 +1,5 @@
+export * as editor from './editor'
+export * as workspace from './workspace'
+export * as quick_pick from './quick_pick'
+export * as notifications from './notifications'
+export * from './test_script'

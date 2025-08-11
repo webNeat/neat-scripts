@@ -1,0 +1,8 @@
+out
+dist
+tests-dist
+tests-workspace
+node_modules
+.vscode-test/
+*.vsix
+.aider*
